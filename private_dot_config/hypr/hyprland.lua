@@ -8,3 +8,10 @@ require("modules.binds")
 require("modules.misc")
 require("modules.input")
 require("modules.wnw")
+
+hl.config({
+    xwayland = {
+        force_zero_scaling = true
+    }
+})
+

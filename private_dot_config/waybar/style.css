@@ -1,0 +1,12 @@
+* {
+  all: unset;
+}
+
+#clock, #pulseaudio, #battery, #workspaces button, #window {
+  background-color: #1D2021;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 2px 5px;
+  border-radius: 5px;
+}
+
