@@ -1,0 +1,13 @@
+packages:
+  linux:
+    pacman:
+      - mako
+      - rofi
+      - fastfetch
+      - waybar
+      - hyprland
+      - power-profiles-daemon
+      - helix
+      - kitty
+      - fish
+      - ly

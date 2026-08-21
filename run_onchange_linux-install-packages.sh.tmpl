@@ -1,0 +1,14 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+
+PACKAGES=(
+{{ range .packages.linux.pacman -}}
+  "{{ . }}"
+{{ end -}}
+)
+
+echo "Installing Packages..."
+sudo pacman -S --needed --noconfirm "${PACKAGES[@]}"
+
+{{ end -}}
+
