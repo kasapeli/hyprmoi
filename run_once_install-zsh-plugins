@@ -1,0 +1,21 @@
+#!/bin/bash
+
+PLUGIN_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins"
+mkdir -p "$PLUGIN_DIR"
+
+PLUGINS=(
+    "https://github.com/zsh-users/zsh-autosuggestions"
+    "https://github.com/zsh-users/zsh-syntax-highlighting"
+)
+
+# Loop through and clone missing repositories
+for repo in "${PLUGINS[@]}"; do
+    plugin_name=$(basename "$repo")
+    if [ ! -d "$PLUGIN_DIR/$plugin_name" ]; then
+        echo "Installing plugin: $plugin_name..."
+        git clone --depth=1 "$repo" "$PLUGIN_DIR/$plugin_name"
+    else
+        echo "Plugin already installed: $plugin_name"
+    fi
+done
+

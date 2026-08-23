@@ -4,10 +4,14 @@ packages:
       - mako
       - rofi
       - fastfetch
-      - waybar
       - hyprland
       - power-profiles-daemon
       - helix
       - kitty
-      - fish
+      - zsh
       - ly
+      - git
+      - less
+    yay:
+      - otf-monocraft
+      - waybar-cava

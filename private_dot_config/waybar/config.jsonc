@@ -24,7 +24,7 @@
   },
 
   "pulseaudio": {
-    "format": "{icon}   {volume}%",
+    "format": "{icon} {volume}%",
     "format-muted": "   Muted",
     "format-icons": {
       "default": ["", "", ""]
@@ -37,10 +37,10 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}   {capacity}%",
-    "format-charging": "{icon} 󱐋   {capacity}%",
+    "format": "{icon} {capacity}%",
+    "format-charging": "{icon} 󱐋 {capacity}%",
     "format-plugged": "  Plugged",
-    "format-alt": "{icon}   {time}",
+    "format-alt": "{icon} {time}",
     "format-icons": ["", "", "", "", ""],
     "tooltip": false,
   }

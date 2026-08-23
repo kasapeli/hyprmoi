@@ -1,5 +1,6 @@
 * {
   all: unset;
+  font-family: "Monocraft", sans-serif;
 }
 
 #clock, #pulseaudio, #battery, #workspaces button, #window {
@@ -8,5 +9,13 @@
   padding-left: 10px;
   margin: 2px 5px;
   border-radius: 5px;
+}
+
+#battery.warning {
+  background-color: #EFAD59;
+}
+
+#battery.critical:not(.charging) {
+  background-color: #E2815C;
 }
 

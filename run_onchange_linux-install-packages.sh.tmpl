@@ -1,14 +1,28 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/bin/bash
 
-PACKAGES=(
+PACMAN_PACKAGES=(
 {{ range .packages.linux.pacman -}}
   "{{ . }}"
 {{ end -}}
 )
 
-echo "Installing Packages..."
-sudo pacman -S --needed --noconfirm "${PACKAGES[@]}"
+echo "Installing Pacman Packages..."
+sudo pacman -S --needed --noconfirm "${PACMAN_PACKAGES[@]}"
 
+{{ if hasKey .packages.linux "yay" -}}
+if command -v yay &> /dev/null; then
+    YAY_PACKAGES=(
+    {{ range .packages.linux.yay -}}
+      "{{ . }}"
+    {{ end -}}
+    )
+
+    echo "Installing AUR Packages with yay..."
+    yay -S --needed --noconfirm "${YAY_PACKAGES[@]}"
+else
+    echo "Warning: 'yay' not found. Skipping AUR packages."
+fi
 {{ end -}}
 
+{{ end -}}
