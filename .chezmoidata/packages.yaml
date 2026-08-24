@@ -12,6 +12,8 @@ packages:
       - ly
       - git
       - less
+      - nix
+      - direnv
     yay:
       - otf-monocraft
       - waybar-cava
