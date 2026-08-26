@@ -11,7 +11,7 @@ source $ZSH/oh-my-zsh.sh
 autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats ' %F{white}(%F{yellow}%b%F{white})%f'
-PROMPT="%(!.%F{red}.%F{white})%n%f %F{blue}%~%f\$vcs_info_msg_0_ "
+PROMPT="%(!.%F{red}.%F{white})%n%f %F{blue}%2~%f\$vcs_info_msg_0_ "
 
 eval "$(direnv hook zsh)"
 
