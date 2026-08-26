@@ -12,8 +12,11 @@ packages:
       - ly
       - git
       - less
+      - awww
       - nix
       - direnv
+      - hyprshot
+      - hyprpicker
     yay:
       - otf-monocraft
       - waybar-cava
